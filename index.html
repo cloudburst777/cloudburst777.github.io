@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Customer Satisfaction Survey</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+  <body>
+    <header>
+    <h1 id="title">Customer Satisfaction Survey</h1>
+    <p id="description">Please take a few moments to complete this satisfaction survey. Thank you very much!</p>  
+    </header>
+    <main>
+    <form id="survey-form" method="POST" action="https://www.freecodecamp.org">
+    <fieldset>
+      <legend>Personal Information</legend>
+    
+        <label id="name-label" for="name">Name:</label>
+        <input type="text" id="name" name="name" required placeholder="e.g. John Doe"/>
+
+    <br><br>
+
+        <label id="email-label" for="email">Email:</label>
+        <input type="email" id="email" name="email" required size="20" placeholder="example@email.com" />
+    
+    <br><br>
+    
+        <label id="number-label" for="number">Age (optional):</label>
+        <input type="number" id="number" name="number"min="3" max="100" placeholder="32" />
+    
+    </fieldset>
+
+    <section>
+      <div>
+      <p>Overall, how satisfied are you with the product / service?</p>
+      <select id="dropdown" name="service" required>
+        <option value="">--Select--</option>
+        <option value="poor">Poor</option>
+        <option value="satisfactory">Satisfactory</option>
+        <option value="good">Good</option>
+        <option value="very-good">Very Good</option>
+        <option selected value="excellent">Excellent</option>
+        </select>
+      </div>
+      </section>
+
+      <section>
+          <p>Would you recommend our product / service to a friend, colleague, or anyone?</p>
+
+          <input checked type="radio" id="absolutely-option" name="product-service" value="absolutely" required/>
+          <label for="absolutely-option">Absolutely</label>
+
+            <input type="radio" id="maybe-option" name="product-service" value="maybe" required />
+          <label for="maybe-option">Maybe</label>
+           
+           <input type="radio" id="not-sure-option" name="product-service" value="not-sure" required />
+          <label for="not-sure-option">Not Sure</label>
+      </section>
+
+      <section>
+      <div>
+      <p>What did you like about our product / service?</p>
+      <select id="dropdown" name="service" required>
+        <option value="">--Please Select--</option>
+        <option value="quality">Quality</option>
+        <option value="price">Affordable Price</option>
+        <option value="customer-service">Customer Service</option>
+        <option value="ease-of-use">Ease of Use</option>
+        <option value="fast-delivery">Fast Delivery</option>
+        </select>
+      </div>
+      </section>
+
+      <section>
+        <p>What can we improve about our product / service?</p>
+        <div>
+          <input type="checkbox" id="product-quality" name="choice" value="quality" required />
+          <label for="product-quality">Product Quality</label>
+        </div>
+
+        <div>
+          <input type="checkbox" id="pricing" name="choice" value="pricing" required />
+          <label for="pricing">Pricing</label>
+        </div>
+
+        <div>
+          <input type="checkbox" id="technical-support" name="choice" value="technical-support" required />
+          <label for="technical-support">Technical Support</label>
+        </div>
+        
+        <div>
+          <input type="checkbox" id="faster-delivery-shipping" name="choice" value="shipping" required />
+          <label for="faster-delivery-shipping">Faster Delivery / Shipping</label>
+        </div>
+
+        <div>
+          <input type="checkbox" id="product-variety" name="choice" value="variety" required />
+          <label for="product-variety">Product Variety</label>
+        </div>
+      </section>
+
+      <section>
+        <p>Any comments or suggestions?</p>
+        <div>
+          <label for="comments"></label>
+          <textarea cols="25" rows="5" name="comments" id="comments"></textarea>
+          </div>
+        </section>
+
+      <button id="submit" type="submit">Submit</button>
+
+      </form>
+    </main>
+  </body>
+</html>
